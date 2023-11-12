@@ -1,4 +1,6 @@
-// Get HTML elements
+import { Pluse,Mines,Refresh } from "./ActionsType/index.js";
+
+
 let showReturn = document.getElementById('Show_Num');
 let plus = document.getElementById('plus');
 let minus = document.getElementById('mines');
@@ -10,11 +12,11 @@ let initialState = 0;
 // Reducer function
 let counterReducer = (state = initialState, action) => {
     switch (action.type) {
-        case 'PLUS':
+        case Pluse:
             return state + 1;
-        case 'MINUS':
+        case Mines:
             return state - 1;
-        case 'RESET':
+        case Refresh:
             return initialState;
         default:
             return state;
@@ -34,16 +36,16 @@ updateUI();
 
 // Event listeners for buttons
 plus.addEventListener('click', () => {
-    store.dispatch({ type: 'PLUS' });
+    store.dispatch({ type: Pluse });
     updateUI();
 });
 
 minus.addEventListener('click', () => {
-    store.dispatch({ type: 'MINUS' });
+    store.dispatch({ type: Mines });
     updateUI();
 });
 
 refresh.addEventListener('click', () => {
-    store.dispatch({ type: 'RESET' });
+    store.dispatch({ type: Refresh });
     updateUI();
 });
