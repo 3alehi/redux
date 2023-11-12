@@ -1,0 +1,40 @@
+/* Calculator.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0; /* رنگ پس‌زمینه */
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+button {
+    font-size: 1.5em;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #4caf50; /* رنگ پس‌زمینه دکمه */
+    color: #fff; /* رنگ متن دکمه */
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* انیمیشن تغییر رنگ پس‌زمینه */
+}
+
+button:hover {
+    background-color: #45a049; /* رنگ پس‌زمینه دکمه هنگام هاور */
+}
+
+/* Add more styling as needed */
