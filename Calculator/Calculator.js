@@ -1,7 +1,7 @@
 // Get HTML elements
 let showReturn = document.getElementById('Show_Num');
 let plus = document.getElementById('plus');
-let minus = document.getElementById('minus');
+let minus = document.getElementById('mines');
 let refresh = document.getElementById('refresh');
 
 // Initial state
@@ -40,7 +40,7 @@ plus.addEventListener('click', () => {
 
 minus.addEventListener('click', () => {
     store.dispatch({ type: 'MINUS' });
-     ();
+    updateUI();
 });
 
 refresh.addEventListener('click', () => {
